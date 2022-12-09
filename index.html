@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | QR code component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --White: hsl(0, 0%, 100%);
+        --Light-gray: hsl(212, 45%, 89%);
+        --Grayish-blue: hsl(220, 15%, 55%);
+        --Dark-blue: hsl(218, 44%, 22%);
+      }
+
+      html {
+        font-size: 62.5%; /* 1 rem = 10 px usando el hack y hace que sea mas facil trabajar con rem para permitir que el codigo se adapte a diferentes tamaños*/
+        box-sizing: border-box; /*hack para el box model*/
+        scroll-snap-type: y mandatory;
+        background-color: var(--Light-gray);
+        font-family: "Outfit", sans-serif;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30rem;
+      }
+      .sombra {
+        -webkit-box-shadow: -4px 6px 14px -3px rgba(0, 0, 0, 0.74);
+        -moz-box-shadow: -4px 6px 14px -3px rgba(0, 0, 0, 0.74);
+        box-shadow: -4px 6px 14px -3px rgba(0, 0, 0, 0.2);
+        background-color: var(--White);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        max-width: 290px;
+        margin: 0 auto;
+      }
+      .qr {
+        height: auto;
+        width: 285px;
+        border-radius: 1.5rem;
+      }
+      .consejo {
+        color: var(--Dark-blue);
+        font-weight: 700;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .mensaje {
+        font-weight: 400;
+        font-size: 1.8rem;
+        text-align: center;
+        margin-top: 1rem;
+      }
+
+      @media (min-width: 375px) {
+        .contenedor {
+          margin-top: 30rem;
+        }
+        .consejo {
+          font-size: 3rem;
+        }
+        .mensaje {
+          font-size: 2rem;
+        }
+        .qr {
+          height: auto;
+          width: 345px;
+        }
+        .sombra {
+          max-width: 350px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="contenedor sombra">
+      <img class="qr" src="image-qr-code.png" alt="caosdad" />
+      <p class="consejo">Improve your front-end skills by building projects</p>
+      <p class="mensaje">
+        Scan the QR code to visit Frontend Mentor and take your coding skills to
+        the next level asdasd
+      </p>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Fernando Rubio</a>.
+      </div>
+    </section>
+  </body>
+</html>
