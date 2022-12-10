@@ -29,84 +29,76 @@
         --Grayish-blue: hsl(220, 15%, 55%);
         --Dark-blue: hsl(218, 44%, 22%);
       }
-
       html {
-        font-size: 62.5%; /* 1 rem = 10 px usando el hack y hace que sea mas facil trabajar con rem para permitir que el codigo se adapte a diferentes tamaños*/
-        box-sizing: border-box; /*hack para el box model*/
-        scroll-snap-type: y mandatory;
-        background-color: var(--Light-gray);
+        box-sizing: border-box;
+        font-size: 62.5%;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
         font-family: "Outfit", sans-serif;
       }
-      .attribution {
-        font-size: 11px;
-        text-align: center;
+      body {
+        background-color: var(--Light-gray);
       }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-      .contenedor {
+      .card {
+        background-color: var(--White);
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 30rem;
-      }
-      .sombra {
-        -webkit-box-shadow: -4px 6px 14px -3px rgba(0, 0, 0, 0.74);
-        -moz-box-shadow: -4px 6px 14px -3px rgba(0, 0, 0, 0.74);
-        box-shadow: -4px 6px 14px -3px rgba(0, 0, 0, 0.2);
-        background-color: var(--White);
+        padding: 1rem;
         border-radius: 1.5rem;
-        padding: 2rem;
-        max-width: 290px;
-        margin: 0 auto;
-      }
-      .qr {
-        height: auto;
-        width: 285px;
-        border-radius: 1.5rem;
-      }
-      .consejo {
-        color: var(--Dark-blue);
-        font-weight: 700;
-        font-size: 2.5rem;
-        text-align: center;
-        margin-bottom: 1rem;
-      }
-      .mensaje {
-        font-weight: 400;
-        font-size: 1.8rem;
-        text-align: center;
-        margin-top: 1rem;
+        width: 320px;
+        height: 500px;
+        margin: 10rem auto;
       }
 
-      @media (min-width: 375px) {
-        .contenedor {
-          margin-top: 30rem;
+      @media (min-width: 376px) {
+        .card {
+          background-color: var(--White);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 1rem;
+          border-radius: 1.5rem;
+          width: 320px;
+          height: 500px;
+          margin: 20rem auto;
         }
-        .consejo {
-          font-size: 3rem;
-        }
-        .mensaje {
-          font-size: 2rem;
-        }
-        .qr {
-          height: auto;
-          width: 345px;
-        }
-        .sombra {
-          max-width: 350px;
-        }
+      }
+
+      .code {
+        border-radius: 1.5rem;
+      }
+      h1,
+      h2 {
+        text-align: center;
+      }
+      .tittle {
+        font-size: 2.3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      .subtittle {
+        font-size: 1.7rem;
+        font-weight: 400;
+      }
+      .code {
+        height: 288px;
+        width: 288px;
       }
     </style>
   </head>
   <body>
-    <section class="contenedor sombra">
-      <img class="qr" src="image-qr-code.png" alt="caosdad" />
-      <p class="consejo">Improve your front-end skills by building projects</p>
-      <p class="mensaje">
+    <section class="card">
+      <img class="code" src="image-qr-code.png" alt="caosdad" />
+      <h1 class="tittle">Improve your front-end skills by building projects</h1>
+      <h2 class="subtittle">
         Scan the QR code to visit Frontend Mentor and take your coding skills to
-        the next level asdasd
-      </p>
+        the next level
+      </h2>
 
       <div class="attribution">
         Challenge by
