@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -41,35 +41,13 @@
         font-family: "Outfit", sans-serif;
       }
       body {
+        height: 100vh;
+        width: 100vw;
         background-color: var(--Light-gray);
-      }
-      .card {
-        background-color: var(--White);
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 1rem;
-        border-radius: 1.5rem;
-        width: 320px;
-        height: 500px;
-        margin: 10rem auto;
-      }
-
-      @media (min-width: 376px) {
-        .card {
-          background-color: var(--White);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          padding: 1rem;
-          border-radius: 1.5rem;
-          width: 320px;
-          height: 500px;
-        }
-      }
-
-      .code {
-        border-radius: 1.5rem;
+        justify-content: center;
       }
       h1,
       h2 {
@@ -84,27 +62,58 @@
         font-size: 1.7rem;
         font-weight: 400;
       }
+
+      @media (min-width: 376px) {
+        .container {
+          width: 15%;
+          background-color: var(--White);
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0 auto;
+          justify-content: center;
+          padding: 1rem;
+          border-radius: 2rem;
+        }
+      }
+      .container {
+        max-width: 90%;
+        background-color: var(--White);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem;
+        margin: 0 auto;
+        border-radius: 2rem;
+      }
       .code {
-        height: 288px;
-        width: 288px;
+        width: 95%;
+        border-radius: 2rem;
       }
     </style>
   </head>
   <body>
-    <section class="card">
-      <img class="code" src="image-qr-code.png" alt="caosdad" />
-      <h1 class="tittle">Improve your front-end skills by building projects</h1>
-      <h2 class="subtittle">
-        Scan the QR code to visit Frontend Mentor and take your coding skills to
-        the next level
-      </h2>
+    <main>
+      <div class="container">
+        <img
+          class="code"
+          src="image-qr-code.png"
+          alt="QR code to frontendmentor.io"
+        />
+        <h1 class="tittle">
+          Improve your front-end skills by building projects
+        </h1>
+        <h2 class="subtittle">
+          Scan the QR code to visit Frontend Mentor and take your coding skills
+          to the next level
+        </h2>
 
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Fernando Rubio</a>.
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Fernando Rubio</a>.
+        </div>
       </div>
-    </section>
+    </main>
   </body>
 </html>
