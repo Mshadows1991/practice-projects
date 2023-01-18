@@ -1,0 +1,133 @@
+:root {
+  /*Fuentes*/
+  --fuente1: "Fraunces", serif;
+  --fuente2: "Montserrat", sans-serif;
+  /*### Primary*/
+
+  --DarkCyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  /*### Neutral*/
+
+  --VeryDarkBlue: hsl(212, 21%, 14%);
+  --DarkGrayishBlue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*1 rem = 10 px*/
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  color: var();
+}
+
+body {
+  background-color: var(--Cream);
+  font-size: 14px;
+  font-family: var(--fuente2);
+}
+
+.card {
+  width: 344px;
+  height: 612px;
+  background-color: var(--White);
+  overflow: hidden;
+  margin: 30px auto;
+  border-radius: 1.2rem;
+}
+
+.card__first-section-image {
+  width: 100%;
+}
+.card__second-section__product-type {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-weight: 500;
+  color: var(--DarkGrayishBlue);
+  font-size: 1.2rem;
+  margin: 2.5rem 2.2rem 0.8rem 2.4rem;
+}
+.card__second-section__product-name {
+  font-family: var(--fuente1);
+  font-weight: 700;
+  font-size: 3.1rem;
+  margin: 0 2.5rem 1.6rem 2.4rem;
+  color: var(--VeryDarkBlue);
+  line-height: 3.4rem;
+}
+
+.card__second-section__product-description {
+  line-height: 2.5rem;
+  margin: 0 2.5rem 1rem 2.4rem;
+}
+
+.card__second-section__price {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.card__second-section__price__discount {
+  margin: 1.4rem 2rem 1rem 2.4rem;
+  font-family: var(--fuente1);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--DarkCyan);
+}
+.card__second-section__price__normal {
+  text-decoration: line-through;
+}
+
+.card__second-section__button {
+  width: 28.9rem;
+  height: 5rem;
+  background-color: var(--DarkCyan);
+  border: none;
+  border-radius: 0.8rem;
+  color: var(--White);
+  display: block;
+  margin: 0 auto;
+}
+.card__second-section__button-icon {
+  margin-right: 1.2rem;
+}
+
+.card__second-section__button:hover {
+  cursor: pointer;
+  background-color: var(--VeryDarkBlue);
+}
+/*Media Queries*/
+@media (min-width: 376px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    width: 60rem;
+    height: 45rem;
+    display: flex;
+    margin: 17rem auto;
+  }
+  .card__first-section-image {
+    width: 30rem;
+  }
+  .card__second-section {
+    width: 30rem;
+  }
+}
