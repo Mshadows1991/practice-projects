@@ -1,0 +1,147 @@
+:root {
+  /*colores*/
+  /*### Primary*/
+
+  --Dark-yan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+  /*### Neutral*/
+
+  --Dark-gray: hsl(0, 0%, 59%);
+
+  /*Fuente*/
+  --fuente1: "Kumbh Sans", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*1 rem = 10 px*/
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  color: var();
+}
+
+body {
+  background-image: url(/images/bg-pattern-top.svg),
+    url(/images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: -350px -300px, 180px 350px;
+  background-size: 150%;
+  font-family: var(--fuente1);
+  background-color: var(--Dark-yan);
+  color: var(--Very-dark-desaturated-blue);
+}
+
+.name-stats {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.card {
+  /* border: 1px solid red; */
+  width: 32.5rem;
+  height: 37.5rem;
+  margin: 150px auto 145px auto;
+  background-color: white;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+/* .card__section-one {
+  background-image: url(/images/bg-pattern-card.svg);
+  background-size: 32.5rem 14rem;
+  background-repeat: no-repeat;
+  background-position: top center;
+} */
+.card__section-one-front-page {
+  height: 140px;
+  background-image: url(/images/bg-pattern-card.svg);
+  background-size: 32.5rem 14rem;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.card__section-two {
+  height: 145px;
+}
+
+.card__section-two-profile-info-picture {
+  display: block;
+  margin: -52px auto 0 auto;
+  border-radius: 50%;
+  border: 6px solid white;
+}
+.card__section-two_profile-info-name-age {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card__section-two_profile-info-age {
+  font-weight: 400;
+}
+
+.card__section-two_profile-info-city {
+  margin: -12px 0px 35px 0px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--Dark-gray);
+}
+.card__section-three {
+  height: 90px;
+  border-top: 1px solid lightgray;
+}
+
+.card__section-three {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.margin-stats {
+  margin-top: 25px;
+  margin-bottom: 1px;
+}
+
+.margin-name-stats {
+  margin-top: 7px;
+  letter-spacing: 2.5px;
+}
+
+/*--------desktop version---------*/
+@media (min-width: 400px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    /* border: 1px solid red; */
+    width: 35.5rem;
+    height: 37.5rem;
+    margin: 170px auto 170px auto;
+    background-color: white;
+    border-radius: 1.2rem;
+    overflow: hidden;
+  }
+  .card__section-one-front-page {
+    height: 140px;
+    background-image: url(/images/bg-pattern-card.svg);
+    background-size: 35.5rem 14rem;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+}
