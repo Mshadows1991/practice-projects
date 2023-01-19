@@ -130,8 +130,8 @@ body {
     background-image: url(/images/bg-pattern-top.svg),
       url(/images/bg-pattern-top.svg);
     background-repeat: no-repeat;
-    background-position: -750px -1075px, 770px 400px;
-    background-size: 95%;
+    background-position: -250px -485px, 670px 510px;
+    background-size: 70%;
   }
   .card {
     /* border: 1px solid red; */
