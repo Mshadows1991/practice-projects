@@ -1,0 +1,171 @@
+:root {
+  /*colors*/
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue-body: hsl(217, 54%, 11%); /*(main BG)*/
+  --Very-dark-blue-card: hsl(216, 50%, 16%); /*(card BG)*/
+  --Very-dar-blue: hsl(215, 32%, 27%); /*(line)*/
+  --White: hsl(0, 0%, 100%);
+
+  /*fonts*/
+  --font1: "Outfit", sans-serif;
+  /*font sizes*/
+  --large: 18px;
+  --medium: 16px;
+  --little: 14px;
+
+  /*font weights*/
+  --bolder: 600;
+  --bold: 400;
+  --lighter: 300;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*1 rem = 10 px*/
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  color: var();
+}
+
+/*mobile*/
+body {
+  background-color: var(--Very-dark-blue-body);
+  font-family: var(--font1);
+  font-size: 1.8rem;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.content-margin {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+.card {
+  width: 33rem;
+  height: 54.4rem;
+  background-color: var(--Very-dark-blue-card);
+  margin: 6rem 2.5rem;
+  border-radius: 1.5rem;
+}
+.section__one {
+  position: relative;
+  height: 30rem;
+  /* border: 1px solid red; */
+}
+.section__one-equilibrium img {
+  margin: 25px 25px 0 25px;
+  height: 27.5rem;
+  width: 28rem;
+  border-radius: 1.5rem;
+}
+.card__box {
+  position: absolute;
+  margin: 25px 25px 0 25px;
+  height: 27.5rem;
+  width: 28rem;
+  border-radius: 1.5rem;
+}
+
+.card__box:hover {
+  background-color: rgb(0 253 245 /0.5);
+  cursor: pointer;
+}
+.section__two {
+  height: 17rem;
+  /* border: 1px solid red; */
+}
+
+.section__one::after {
+  content: url(/images/icon-view.svg);
+  position: absolute;
+  top: 150px;
+  left: 140px;
+}
+.section__two-equilibrium {
+  font-size: 2.2rem;
+  font-weight: var(--bolder);
+  font-family: var(--font1);
+  color: var(--White);
+  margin-top: 0;
+  margin-bottom: 2rem;
+  line-height: 1rem;
+  padding-top: 3rem;
+}
+.section__two-description {
+  font-size: var(--medium);
+  padding-top: 1rem;
+}
+.section__two-stats {
+  justify-content: space-between;
+  padding-top: 0.8rem;
+  font-size: var(--medium);
+  border-bottom: 1px solid var(--White);
+}
+.section__two-stats-price-etherum {
+  color: var(--Cyan);
+}
+.section__two-equilibrium:hover,
+.section__three-creator-name-complete:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+.section__two-stats,
+.section__two-stats-price,
+.section__two-stats-count-down {
+  display: flex;
+  align-items: center;
+}
+.section__three {
+  height: 7.4rem;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  font-size: var(--medium);
+}
+
+.section__three-avatar {
+  margin-left: 25px;
+  margin-right: 1.5rem;
+  display: inline;
+  height: 3.5rem;
+  border: 1px solid var(--White);
+  border-radius: 100%;
+}
+.section__two-description,
+.section__two-stats-count-down-days-left,
+.section__three-creator-name {
+  color: var(--Soft-blue);
+}
+
+.section__three-creator-name span {
+  color: var(--White);
+}
+
+/*Desktop*/
+@media (min-width: 376px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    width: 33rem;
+    height: 54.4rem;
+    background-color: var(--Very-dark-blue-card);
+    border-radius: 1.5rem;
+  }
+}
